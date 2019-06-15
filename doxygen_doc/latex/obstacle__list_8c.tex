@@ -1,0 +1,76 @@
+\hypertarget{obstacle__list_8c}{}\section{/home/paulm/\+Desktop/\+Snake\+\_\+\+Projekt/source/obstacle\+\_\+list.c File Reference}
+\label{obstacle__list_8c}\index{/home/paulm/Desktop/Snake\_Projekt/source/obstacle\_list.c@{/home/paulm/Desktop/Snake\_Projekt/source/obstacle\_list.c}}
+{\ttfamily \#include $<$G\+L/gl.\+h$>$}\newline
+{\ttfamily \#include $<$G\+L/glut.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../headers/obstacle\+\_\+list\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/point\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/main\+\_\+header.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} $\ast$ \mbox{\hyperlink{obstacle__list_8c_aa1f74edb11933acdde7939adbca7c24d}{create\+\_\+obstacle\+\_\+list}} ()
+\item 
+struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} $\ast$ \mbox{\hyperlink{obstacle__list_8c_a3e605395ac4f46691b7c39f4f212c6ec}{insert\+\_\+to\+\_\+obstacles\+\_\+front}} (struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} $\ast$list, struct \mbox{\hyperlink{structobstacle__list__node}{obstacle\+\_\+list\+\_\+node}} $\ast$new\+\_\+node)
+\item 
+bool \mbox{\hyperlink{obstacle__list_8c_a1df6c52919fa9ad529b5d9fad99b8646}{insert\+\_\+obstacle}} (struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} $\ast$$\ast$list)
+\item 
+void \mbox{\hyperlink{obstacle__list_8c_ababfed6b720a65865ecb327a95d09aec}{print\+\_\+obstacle\+\_\+list}} (struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} list)
+\item 
+bool \mbox{\hyperlink{obstacle__list_8c_a85eb31ba2ec3f85385568ebd559f6e6d}{search\+\_\+obstacle\+\_\+list}} (struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} list, int x, int y)
+\item 
+void \mbox{\hyperlink{obstacle__list_8c_afc12fe3629bee3fa485a300971d33748}{remove\+\_\+list\+\_\+obstacle}} (struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} $\ast$$\ast$list)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{obstacle__list_8c_aa1f74edb11933acdde7939adbca7c24d}\label{obstacle__list_8c_aa1f74edb11933acdde7939adbca7c24d}} 
+\index{obstacle\_list.c@{obstacle\_list.c}!create\_obstacle\_list@{create\_obstacle\_list}}
+\index{create\_obstacle\_list@{create\_obstacle\_list}!obstacle\_list.c@{obstacle\_list.c}}
+\subsubsection{\texorpdfstring{create\_obstacle\_list()}{create\_obstacle\_list()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}}$\ast$ create\+\_\+obstacle\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+funkcja tworząca listę przeszkód \begin{DoxyReturn}{Returns}
+wskaźnik na strukturę listy przeszkód po zmianach 
+\end{DoxyReturn}
+\mbox{\Hypertarget{obstacle__list_8c_a1df6c52919fa9ad529b5d9fad99b8646}\label{obstacle__list_8c_a1df6c52919fa9ad529b5d9fad99b8646}} 
+\index{obstacle\_list.c@{obstacle\_list.c}!insert\_obstacle@{insert\_obstacle}}
+\index{insert\_obstacle@{insert\_obstacle}!obstacle\_list.c@{obstacle\_list.c}}
+\subsubsection{\texorpdfstring{insert\_obstacle()}{insert\_obstacle()}}
+{\footnotesize\ttfamily bool insert\+\_\+obstacle (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} $\ast$$\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja dodająca przeszkodę do listy \begin{DoxyReturn}{Returns}
+flaga określająca czy dodawanie się powiodło 
+\end{DoxyReturn}
+\mbox{\Hypertarget{obstacle__list_8c_a3e605395ac4f46691b7c39f4f212c6ec}\label{obstacle__list_8c_a3e605395ac4f46691b7c39f4f212c6ec}} 
+\index{obstacle\_list.c@{obstacle\_list.c}!insert\_to\_obstacles\_front@{insert\_to\_obstacles\_front}}
+\index{insert\_to\_obstacles\_front@{insert\_to\_obstacles\_front}!obstacle\_list.c@{obstacle\_list.c}}
+\subsubsection{\texorpdfstring{insert\_to\_obstacles\_front()}{insert\_to\_obstacles\_front()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}}$\ast$ insert\+\_\+to\+\_\+obstacles\+\_\+front (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} $\ast$}]{,  }\item[{struct \mbox{\hyperlink{structobstacle__list__node}{obstacle\+\_\+list\+\_\+node}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja wstawiająca element na początek listy przeszkód \begin{DoxyReturn}{Returns}
+wskaźnik na strukturę listy przeszkód po zmianach 
+\end{DoxyReturn}
+\mbox{\Hypertarget{obstacle__list_8c_ababfed6b720a65865ecb327a95d09aec}\label{obstacle__list_8c_ababfed6b720a65865ecb327a95d09aec}} 
+\index{obstacle\_list.c@{obstacle\_list.c}!print\_obstacle\_list@{print\_obstacle\_list}}
+\index{print\_obstacle\_list@{print\_obstacle\_list}!obstacle\_list.c@{obstacle\_list.c}}
+\subsubsection{\texorpdfstring{print\_obstacle\_list()}{print\_obstacle\_list()}}
+{\footnotesize\ttfamily void print\+\_\+obstacle\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}}}]{ }\end{DoxyParamCaption})}
+
+funkcja drukująca listę przeszkód \mbox{\Hypertarget{obstacle__list_8c_afc12fe3629bee3fa485a300971d33748}\label{obstacle__list_8c_afc12fe3629bee3fa485a300971d33748}} 
+\index{obstacle\_list.c@{obstacle\_list.c}!remove\_list\_obstacle@{remove\_list\_obstacle}}
+\index{remove\_list\_obstacle@{remove\_list\_obstacle}!obstacle\_list.c@{obstacle\_list.c}}
+\subsubsection{\texorpdfstring{remove\_list\_obstacle()}{remove\_list\_obstacle()}}
+{\footnotesize\ttfamily void remove\+\_\+list\+\_\+obstacle (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}} $\ast$$\ast$}]{list }\end{DoxyParamCaption})}
+
+funkcja usuwająca przeszkodę z listy \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{obstacle__list_8c_a85eb31ba2ec3f85385568ebd559f6e6d}\label{obstacle__list_8c_a85eb31ba2ec3f85385568ebd559f6e6d}} 
+\index{obstacle\_list.c@{obstacle\_list.c}!search\_obstacle\_list@{search\_obstacle\_list}}
+\index{search\_obstacle\_list@{search\_obstacle\_list}!obstacle\_list.c@{obstacle\_list.c}}
+\subsubsection{\texorpdfstring{search\_obstacle\_list()}{search\_obstacle\_list()}}
+{\footnotesize\ttfamily bool search\+\_\+obstacle\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structobstacle__list}{obstacle\+\_\+list}}}]{,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+funkcja wyszukująca przeszkodę w liście o zadanych koordynatach \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}

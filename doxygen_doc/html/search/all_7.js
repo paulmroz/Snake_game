@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['insert_5ffront',['insert_front',['../food__list_8c.html#afcfe148c0ae020d74943b900bac50588',1,'insert_front(struct food_list *list, struct food_list_node *new_node):&#160;food_list.c'],['../food__list__header_8h.html#a783b21f6e87d03128f77d0c409c95012',1,'insert_front(struct food_list *, struct food_list_node *):&#160;food_list.c']]],
+  ['insert_5fnode',['insert_node',['../food__list_8c.html#a2a2a5a3ba464fa1cffc555cfbfc31f34',1,'insert_node(struct food_list **list):&#160;food_list.c'],['../food__list__header_8h.html#a63914117dfaddfc4cd327d5b0b41cce4',1,'insert_node(struct food_list **):&#160;food_list.c']]],
+  ['insert_5fobstacle',['insert_obstacle',['../obstacle__list_8c.html#a1df6c52919fa9ad529b5d9fad99b8646',1,'insert_obstacle(struct obstacle_list **list):&#160;obstacle_list.c'],['../obstacle__list__header_8h.html#a1027e6fbe1f2f51366a285d4a3a36aa4',1,'insert_obstacle(struct obstacle_list **):&#160;obstacle_list.c']]],
+  ['insert_5fto_5fobstacles_5ffront',['insert_to_obstacles_front',['../obstacle__list_8c.html#a3e605395ac4f46691b7c39f4f212c6ec',1,'insert_to_obstacles_front(struct obstacle_list *list, struct obstacle_list_node *new_node):&#160;obstacle_list.c'],['../obstacle__list__header_8h.html#a3257929484e8048ca132ea7e0367a06d',1,'insert_to_obstacles_front(struct obstacle_list *, struct obstacle_list_node *):&#160;obstacle_list.c']]],
+  ['is_5fconflict',['is_conflict',['../main_8c.html#a28a05424151282fa281e1eb8ac54d097',1,'is_conflict(struct Snake *snake, int x, int y):&#160;main.c'],['../main__header_8h.html#a28a05424151282fa281e1eb8ac54d097',1,'is_conflict(struct Snake *snake, int x, int y):&#160;main.c']]],
+  ['is_5fempty',['is_empty',['../snake_8c.html#a0d345717cd5e7e3fb37bce26b3b035be',1,'is_empty(struct snake_queue queue):&#160;snake.c'],['../snake__header_8h.html#a0d345717cd5e7e3fb37bce26b3b035be',1,'is_empty(struct snake_queue queue):&#160;snake.c']]],
+  ['is_5ftoxic',['is_toxic',['../structfood__list__node.html#a76f1ab00feec2593cfd4d944cb308b03',1,'food_list_node']]]
+];

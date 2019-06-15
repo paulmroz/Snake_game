@@ -1,0 +1,37 @@
+\hypertarget{point_8c}{}\section{/home/paulm/\+Desktop/\+Snake\+\_\+\+Projekt/source/point.c File Reference}
+\label{point_8c}\index{/home/paulm/Desktop/Snake\_Projekt/source/point.c@{/home/paulm/Desktop/Snake\_Projekt/source/point.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../headers/point\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/main\+\_\+header.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPoint}{Point}} $\ast$ \mbox{\hyperlink{point_8c_ae00fd5116508b3cac4c59a00d81b98ac}{random\+\_\+point}} ()
+\item 
+void \mbox{\hyperlink{point_8c_ab80c874de06a44ec683f9a47abed563f}{change\+\_\+point\+\_\+status}} (int x, int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{point_8c_ab80c874de06a44ec683f9a47abed563f}\label{point_8c_ab80c874de06a44ec683f9a47abed563f}} 
+\index{point.c@{point.c}!change\_point\_status@{change\_point\_status}}
+\index{change\_point\_status@{change\_point\_status}!point.c@{point.c}}
+\subsubsection{\texorpdfstring{change\_point\_status()}{change\_point\_status()}}
+{\footnotesize\ttfamily void change\+\_\+point\+\_\+status (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+funkcja ustawiająca flagę zajętości na polu o zadanych koordynatach 
+\begin{DoxyParams}{Parameters}
+{\em x} & współrzędna X \\
+\hline
+{\em y} & współrzędna Y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{point_8c_ae00fd5116508b3cac4c59a00d81b98ac}\label{point_8c_ae00fd5116508b3cac4c59a00d81b98ac}} 
+\index{point.c@{point.c}!random\_point@{random\_point}}
+\index{random\_point@{random\_point}!point.c@{point.c}}
+\subsubsection{\texorpdfstring{random\_point()}{random\_point()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structPoint}{Point}}$\ast$ random\+\_\+point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+funkcja tworząca punkt o losowych koordynatach \begin{DoxyReturn}{Returns}
+wskaźnik na wylosowany punkt 
+\end{DoxyReturn}

@@ -1,0 +1,115 @@
+\hypertarget{food__list__header_8h}{}\section{/home/paulm/\+Desktop/\+Snake\+\_\+\+Projekt/headers/food\+\_\+list\+\_\+header.h File Reference}
+\label{food__list__header_8h}\index{/home/paulm/Desktop/Snake\_Projekt/headers/food\_list\_header.h@{/home/paulm/Desktop/Snake\_Projekt/headers/food\_list\_header.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../headers/main\+\_\+header.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfood__list__node}{food\+\_\+list\+\_\+node}}
+\item 
+struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}} $\ast$ \mbox{\hyperlink{food__list__header_8h_a4f46033ec96ab1b8e83bfce2cf7aea7d}{create\+\_\+list}} ()
+\item 
+struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}} $\ast$ \mbox{\hyperlink{food__list__header_8h_a783b21f6e87d03128f77d0c409c95012}{insert\+\_\+front}} (struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}} $\ast$, struct \mbox{\hyperlink{structfood__list__node}{food\+\_\+list\+\_\+node}} $\ast$)
+\item 
+bool \mbox{\hyperlink{food__list__header_8h_a63914117dfaddfc4cd327d5b0b41cce4}{insert\+\_\+node}} (struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}} $\ast$$\ast$)
+\item 
+struct \mbox{\hyperlink{structfood__list__node}{food\+\_\+list\+\_\+node}} $\ast$ \mbox{\hyperlink{food__list__header_8h_a43b1fe9256b76a6fbda39a195b7c04b9}{find\+\_\+prev\+\_\+node}} (struct \mbox{\hyperlink{structfood__list__node}{food\+\_\+list\+\_\+node}} $\ast$, int, int)
+\item 
+void \mbox{\hyperlink{food__list__header_8h_a0ccdc13138fb6d756b6055bf54f86f7c}{delete\+\_\+after}} (struct \mbox{\hyperlink{structfood__list__node}{food\+\_\+list\+\_\+node}} $\ast$)
+\item 
+bool \mbox{\hyperlink{food__list__header_8h_aa68bf8d4791345e79a537441c3dea37d}{delete\+\_\+node}} (struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}} $\ast$$\ast$, int y, int x, bool $\ast$is\+Toxic)
+\item 
+void \mbox{\hyperlink{food__list__header_8h_a925287494297841db9b6fb290640073e}{print\+\_\+list}} (struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}})
+\item 
+bool \mbox{\hyperlink{food__list__header_8h_aaf6c7bfaf3da392762ae00b3ca7e85ee}{search\+\_\+list}} (struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}}, int, int)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{food__list__header_8h_a4f46033ec96ab1b8e83bfce2cf7aea7d}\label{food__list__header_8h_a4f46033ec96ab1b8e83bfce2cf7aea7d}} 
+\index{food\_list\_header.h@{food\_list\_header.h}!create\_list@{create\_list}}
+\index{create\_list@{create\_list}!food\_list\_header.h@{food\_list\_header.h}}
+\subsubsection{\texorpdfstring{create\_list()}{create\_list()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}}$\ast$ create\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+funkcja tworząca listę owoców \begin{DoxyReturn}{Returns}
+lista stworzona przez funkcje 
+\end{DoxyReturn}
+\mbox{\Hypertarget{food__list__header_8h_a0ccdc13138fb6d756b6055bf54f86f7c}\label{food__list__header_8h_a0ccdc13138fb6d756b6055bf54f86f7c}} 
+\index{food\_list\_header.h@{food\_list\_header.h}!delete\_after@{delete\_after}}
+\index{delete\_after@{delete\_after}!food\_list\_header.h@{food\_list\_header.h}}
+\subsubsection{\texorpdfstring{delete\_after()}{delete\_after()}}
+{\footnotesize\ttfamily void delete\+\_\+after (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structfood__list__node}{food\+\_\+list\+\_\+node}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja usuwająca element w liście owoców za podanym elementem \mbox{\Hypertarget{food__list__header_8h_aa68bf8d4791345e79a537441c3dea37d}\label{food__list__header_8h_aa68bf8d4791345e79a537441c3dea37d}} 
+\index{food\_list\_header.h@{food\_list\_header.h}!delete\_node@{delete\_node}}
+\index{delete\_node@{delete\_node}!food\_list\_header.h@{food\_list\_header.h}}
+\subsubsection{\texorpdfstring{delete\_node()}{delete\_node()}}
+{\footnotesize\ttfamily bool delete\+\_\+node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}} $\ast$$\ast$}]{,  }\item[{int}]{y,  }\item[{int}]{x,  }\item[{bool $\ast$}]{is\+Toxic }\end{DoxyParamCaption})}
+
+funkcja usuwająca element o podanych współrzędnych 
+\begin{DoxyParams}{Parameters}
+{\em y} & współrzędna Y \\
+\hline
+{\em x} & współrzędna X \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+flaga określająca czy owoc został odlaneziony 
+\end{DoxyReturn}
+\mbox{\Hypertarget{food__list__header_8h_a43b1fe9256b76a6fbda39a195b7c04b9}\label{food__list__header_8h_a43b1fe9256b76a6fbda39a195b7c04b9}} 
+\index{food\_list\_header.h@{food\_list\_header.h}!find\_prev\_node@{find\_prev\_node}}
+\index{find\_prev\_node@{find\_prev\_node}!food\_list\_header.h@{food\_list\_header.h}}
+\subsubsection{\texorpdfstring{find\_prev\_node()}{find\_prev\_node()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structfood__list__node}{food\+\_\+list\+\_\+node}}$\ast$ find\+\_\+prev\+\_\+node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structfood__list__node}{food\+\_\+list\+\_\+node}} $\ast$}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+funkcja znajdująca owoc, który znajduje sie w liście przed owocem o podanych współrzędnych \begin{DoxyReturn}{Returns}
+szukany owoc 
+\end{DoxyReturn}
+\mbox{\Hypertarget{food__list__header_8h_a783b21f6e87d03128f77d0c409c95012}\label{food__list__header_8h_a783b21f6e87d03128f77d0c409c95012}} 
+\index{food\_list\_header.h@{food\_list\_header.h}!insert\_front@{insert\_front}}
+\index{insert\_front@{insert\_front}!food\_list\_header.h@{food\_list\_header.h}}
+\subsubsection{\texorpdfstring{insert\_front()}{insert\_front()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}}$\ast$ insert\+\_\+front (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}} $\ast$}]{,  }\item[{struct \mbox{\hyperlink{structfood__list__node}{food\+\_\+list\+\_\+node}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja dodająca element na początek listy \begin{DoxyReturn}{Returns}
+lista po dodaniu element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{food__list__header_8h_a63914117dfaddfc4cd327d5b0b41cce4}\label{food__list__header_8h_a63914117dfaddfc4cd327d5b0b41cce4}} 
+\index{food\_list\_header.h@{food\_list\_header.h}!insert\_node@{insert\_node}}
+\index{insert\_node@{insert\_node}!food\_list\_header.h@{food\_list\_header.h}}
+\subsubsection{\texorpdfstring{insert\_node()}{insert\_node()}}
+{\footnotesize\ttfamily bool insert\+\_\+node (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}} $\ast$$\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja dodająca do listy owoc o losowym położeniu i prawdopodobieństwie 0.\+1 na bycie toksycznym \begin{DoxyReturn}{Returns}
+flaga określająca czy dodawanie się powiodło 
+\end{DoxyReturn}
+\mbox{\Hypertarget{food__list__header_8h_a925287494297841db9b6fb290640073e}\label{food__list__header_8h_a925287494297841db9b6fb290640073e}} 
+\index{food\_list\_header.h@{food\_list\_header.h}!print\_list@{print\_list}}
+\index{print\_list@{print\_list}!food\_list\_header.h@{food\_list\_header.h}}
+\subsubsection{\texorpdfstring{print\_list()}{print\_list()}}
+{\footnotesize\ttfamily void print\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}}}]{ }\end{DoxyParamCaption})}
+
+funkcja drukująca daną listę owoców na ekran \mbox{\Hypertarget{food__list__header_8h_aaf6c7bfaf3da392762ae00b3ca7e85ee}\label{food__list__header_8h_aaf6c7bfaf3da392762ae00b3ca7e85ee}} 
+\index{food\_list\_header.h@{food\_list\_header.h}!search\_list@{search\_list}}
+\index{search\_list@{search\_list}!food\_list\_header.h@{food\_list\_header.h}}
+\subsubsection{\texorpdfstring{search\_list()}{search\_list()}}
+{\footnotesize\ttfamily bool search\+\_\+list (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structfood__list}{food\+\_\+list}}}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+funkcja określająca czy w liście owoców znajduje się owoc o zadanych współrzędnych 
+\begin{DoxyParams}{Parameters}
+{\em y} & współrzędna Y \\
+\hline
+{\em x} & współrzędna X \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+flaga określająca czy owoc został odlaneziony 
+\end{DoxyReturn}

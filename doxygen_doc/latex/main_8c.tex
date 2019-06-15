@@ -1,0 +1,135 @@
+\hypertarget{main_8c}{}\section{/home/paulm/\+Desktop/\+Snake\+\_\+\+Projekt/source/main.c File Reference}
+\label{main_8c}\index{/home/paulm/Desktop/Snake\_Projekt/source/main.c@{/home/paulm/Desktop/Snake\_Projekt/source/main.c}}
+{\ttfamily \#include $<$G\+L/gl.\+h$>$}\newline
+{\ttfamily \#include $<$G\+L/glut.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../headers/main\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/snake\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/point\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/obstacle\+\_\+list\+\_\+header.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a241aeeb764887ae5e3de58b98f04b16d}{W\+I\+D\+TH}}~50
+\item 
+\#define \mbox{\hyperlink{main_8c_aed89bd71aee8be823e8a20ec4e093c1e}{H\+E\+I\+G\+HT}}~50
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{main_8c_aa7ba3645f571434a34b110b82e0d1b56}{setup}} (int $\ast$argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{main_8c_a9df8b4bcb1fd06b4078a76ed9189a78c}{show\+\_\+window}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a73b6df8ac67794cf1ad91f18c71c4a87}{reshape\+\_\+window}} (int width, int height)
+\item 
+void \mbox{\hyperlink{main_8c_a3c3e683a005eace2dd1e4d551056d9b6}{timer}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a3a5b38b1d4aa5b058bc59f0219c29cb4}{get\+\_\+user\+\_\+input}} (int key)
+\item 
+bool \mbox{\hyperlink{main_8c_a28a05424151282fa281e1eb8ac54d097}{is\+\_\+conflict}} (struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$\mbox{\hyperlink{main__header_8h_a34d0b1072820e65492ab46abcab01a8d}{snake}}, int x, int y)
+\item 
+void \mbox{\hyperlink{main_8c_a4202fa5c5191c7e387d7570da6c8cd8c}{end\+\_\+game}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8c_aed89bd71aee8be823e8a20ec4e093c1e}\label{main_8c_aed89bd71aee8be823e8a20ec4e093c1e}} 
+\index{main.c@{main.c}!HEIGHT@{HEIGHT}}
+\index{HEIGHT@{HEIGHT}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{HEIGHT}{HEIGHT}}
+{\footnotesize\ttfamily \#define H\+E\+I\+G\+HT~50}
+
+\mbox{\Hypertarget{main_8c_a241aeeb764887ae5e3de58b98f04b16d}\label{main_8c_a241aeeb764887ae5e3de58b98f04b16d}} 
+\index{main.c@{main.c}!WIDTH@{WIDTH}}
+\index{WIDTH@{WIDTH}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{WIDTH}{WIDTH}}
+{\footnotesize\ttfamily \#define W\+I\+D\+TH~50}
+
+\begin{DoxyAuthor}{Authors}
+Paweł Mróz, Mikołaj Dyk, Dawid Daszkiewicz 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06.\+05.\+2019 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]Gdy uzytkownik zaraz po rozpoczeciu gry naciśnie strzałkę w górę, gra kończy się \end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a4202fa5c5191c7e387d7570da6c8cd8c}\label{main_8c_a4202fa5c5191c7e387d7570da6c8cd8c}} 
+\index{main.c@{main.c}!end\_game@{end\_game}}
+\index{end\_game@{end\_game}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{end\_game()}{end\_game()}}
+{\footnotesize\ttfamily void end\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+funkcja kończąca grę, wyświetla napisy końcowe \mbox{\Hypertarget{main_8c_a3a5b38b1d4aa5b058bc59f0219c29cb4}\label{main_8c_a3a5b38b1d4aa5b058bc59f0219c29cb4}} 
+\index{main.c@{main.c}!get\_user\_input@{get\_user\_input}}
+\index{get\_user\_input@{get\_user\_input}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{get\_user\_input()}{get\_user\_input()}}
+{\footnotesize\ttfamily void get\+\_\+user\+\_\+input (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+funkcja pobierająca klawisz naciśnięty przez gracza, oraz ustawiająca kierunek w którym porusza się wąż \mbox{\Hypertarget{main_8c_a28a05424151282fa281e1eb8ac54d097}\label{main_8c_a28a05424151282fa281e1eb8ac54d097}} 
+\index{main.c@{main.c}!is\_conflict@{is\_conflict}}
+\index{is\_conflict@{is\_conflict}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{is\_conflict()}{is\_conflict()}}
+{\footnotesize\ttfamily bool is\+\_\+conflict (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$}]{snake,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+funkcja sprawdzajace czy waż koliduje z pokarmem 
+\begin{DoxyParams}{Parameters}
+{\em snake} & struktura węża \\
+\hline
+{\em x} & współrzędna X \\
+\hline
+{\em y} & współrzędna Y \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+flaga określająca czy wystąpiła kolizja 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a73b6df8ac67794cf1ad91f18c71c4a87}\label{main_8c_a73b6df8ac67794cf1ad91f18c71c4a87}} 
+\index{main.c@{main.c}!reshape\_window@{reshape\_window}}
+\index{reshape\_window@{reshape\_window}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{reshape\_window()}{reshape\_window()}}
+{\footnotesize\ttfamily void reshape\+\_\+window (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+funkcja ustawiająca okno gry 
+\begin{DoxyParams}{Parameters}
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_aa7ba3645f571434a34b110b82e0d1b56}\label{main_8c_aa7ba3645f571434a34b110b82e0d1b56}} 
+\index{main.c@{main.c}!setup@{setup}}
+\index{setup@{setup}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}\item[{int $\ast$}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+funkcja inicjująca bibliotekę G\+L\+UT 
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8c_a9df8b4bcb1fd06b4078a76ed9189a78c}\label{main_8c_a9df8b4bcb1fd06b4078a76ed9189a78c}} 
+\index{main.c@{main.c}!show\_window@{show\_window}}
+\index{show\_window@{show\_window}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{show\_window()}{show\_window()}}
+{\footnotesize\ttfamily void show\+\_\+window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+funkcja inicjująca okno gry \mbox{\Hypertarget{main_8c_a3c3e683a005eace2dd1e4d551056d9b6}\label{main_8c_a3c3e683a005eace2dd1e4d551056d9b6}} 
+\index{main.c@{main.c}!timer@{timer}}
+\index{timer@{timer}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{timer()}{timer()}}
+{\footnotesize\ttfamily void timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+funkcja pomocnicza do obliczania szybkosci weża 

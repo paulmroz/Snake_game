@@ -1,0 +1,178 @@
+\hypertarget{snake_8c}{}\section{/home/paulm/\+Desktop/\+Snake\+\_\+\+Projekt/source/snake.c File Reference}
+\label{snake_8c}\index{/home/paulm/Desktop/Snake\_Projekt/source/snake.c@{/home/paulm/Desktop/Snake\_Projekt/source/snake.c}}
+{\ttfamily \#include $<$G\+L/gl.\+h$>$}\newline
+{\ttfamily \#include $<$G\+L/glut.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../headers/snake\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/point\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/main\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../headers/obstacle\+\_\+list\+\_\+header.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{snake_8c_a7e72a8b6c470e90e8d69fb82a33f87ca}{push\+\_\+front}} (struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} $\ast$queue, int x, int y)
+\item 
+bool \mbox{\hyperlink{snake_8c_ad1c9afbd1d33a40651b78d3f56bbc99b}{push\+\_\+back}} (struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} $\ast$queue, int x, int y)
+\item 
+bool \mbox{\hyperlink{snake_8c_a6a05bdc4a5c002c137244fd451478bf0}{pop\+\_\+back}} (struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} $\ast$queue)
+\item 
+struct \mbox{\hyperlink{structSnake}{Snake}} \mbox{\hyperlink{snake_8c_a0f68b1ddad49c9ebb12fbfb21c4253db}{create\+\_\+snake}} ()
+\item 
+void \mbox{\hyperlink{snake_8c_ae2e821e0abda04e2d2c85ef528cd4352}{save\+\_\+to\+\_\+file}} ()
+\item 
+bool \mbox{\hyperlink{snake_8c_a854375ed7069a3ff96830dd7b7487683}{go\+\_\+up}} (struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$\mbox{\hyperlink{main__header_8h_a34d0b1072820e65492ab46abcab01a8d}{snake}})
+\item 
+bool \mbox{\hyperlink{snake_8c_a2a8df9c5dfa0b95c456ba6c615c85bea}{go\+\_\+down}} (struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$\mbox{\hyperlink{main__header_8h_a34d0b1072820e65492ab46abcab01a8d}{snake}})
+\item 
+bool \mbox{\hyperlink{snake_8c_a85e5f1c22566b61771bdd55521061c11}{go\+\_\+left}} (struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$\mbox{\hyperlink{main__header_8h_a34d0b1072820e65492ab46abcab01a8d}{snake}})
+\item 
+bool \mbox{\hyperlink{snake_8c_a532295802b6edeb451ed0c89c1a29639}{go\+\_\+right}} (struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$\mbox{\hyperlink{main__header_8h_a34d0b1072820e65492ab46abcab01a8d}{snake}})
+\item 
+enum \mbox{\hyperlink{main__header_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} \mbox{\hyperlink{snake_8c_aeb70803051ab20155e746e0cfd6d9e04}{move\+\_\+snake}} (struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$\mbox{\hyperlink{main__header_8h_a34d0b1072820e65492ab46abcab01a8d}{snake}})
+\item 
+void \mbox{\hyperlink{snake_8c_a9eb939452fb1538d2799f04d833e8264}{eat\+\_\+food}} (struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$\mbox{\hyperlink{main__header_8h_a34d0b1072820e65492ab46abcab01a8d}{snake}}, int x, int y)
+\item 
+void \mbox{\hyperlink{snake_8c_a85c767e5893ca8cc9701fce3636b19ae}{display}} (struct \mbox{\hyperlink{structSnake}{Snake}} \mbox{\hyperlink{main__header_8h_a34d0b1072820e65492ab46abcab01a8d}{snake}})
+\item 
+bool \mbox{\hyperlink{snake_8c_a3250568507dbe2bc6d8dfcf12a374b2e}{search\+\_\+queue}} (struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} queue, int x, int y)
+\item 
+int \mbox{\hyperlink{snake_8c_a712200a2ec240952894b3e15474c67d9}{get\+\_\+size}} (struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} $\ast$queue)
+\item 
+bool \mbox{\hyperlink{snake_8c_a0d345717cd5e7e3fb37bce26b3b035be}{is\+\_\+empty}} (struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} queue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{snake_8c_a0f68b1ddad49c9ebb12fbfb21c4253db}\label{snake_8c_a0f68b1ddad49c9ebb12fbfb21c4253db}} 
+\index{snake.c@{snake.c}!create\_snake@{create\_snake}}
+\index{create\_snake@{create\_snake}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{create\_snake()}{create\_snake()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structSnake}{Snake}} create\+\_\+snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+funkcja tworząca wężą \begin{DoxyReturn}{Returns}
+struktura przechowująca typ bazowy węża 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_a85c767e5893ca8cc9701fce3636b19ae}\label{snake_8c_a85c767e5893ca8cc9701fce3636b19ae}} 
+\index{snake.c@{snake.c}!display@{display}}
+\index{display@{display}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSnake}{Snake}}}]{ }\end{DoxyParamCaption})}
+
+funkcja wyświetlająca węża \mbox{\Hypertarget{snake_8c_a9eb939452fb1538d2799f04d833e8264}\label{snake_8c_a9eb939452fb1538d2799f04d833e8264}} 
+\index{snake.c@{snake.c}!eat\_food@{eat\_food}}
+\index{eat\_food@{eat\_food}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{eat\_food()}{eat\_food()}}
+{\footnotesize\ttfamily void eat\+\_\+food (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$}]{,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+funkcja usuwająca owoc o podanych koordynatach wykonując efekt \char`\"{}zjadania\char`\"{} czyli dodaje lub odejmuje długość węża 
+\begin{DoxyParams}{Parameters}
+{\em x} & współrzędna X \\
+\hline
+{\em y} & współrzędna Y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{snake_8c_a712200a2ec240952894b3e15474c67d9}\label{snake_8c_a712200a2ec240952894b3e15474c67d9}} 
+\index{snake.c@{snake.c}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily int get\+\_\+size (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja pobierająca ilość elementów w kolejce węża \begin{DoxyReturn}{Returns}
+ilość elementów w kolejce węża 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_a2a8df9c5dfa0b95c456ba6c615c85bea}\label{snake_8c_a2a8df9c5dfa0b95c456ba6c615c85bea}} 
+\index{snake.c@{snake.c}!go\_down@{go\_down}}
+\index{go\_down@{go\_down}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{go\_down()}{go\_down()}}
+{\footnotesize\ttfamily bool go\+\_\+down (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja przemieszczająca węża w dół \begin{DoxyReturn}{Returns}
+flaga informująca o tym czy nastąpiła kolizja 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_a85e5f1c22566b61771bdd55521061c11}\label{snake_8c_a85e5f1c22566b61771bdd55521061c11}} 
+\index{snake.c@{snake.c}!go\_left@{go\_left}}
+\index{go\_left@{go\_left}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{go\_left()}{go\_left()}}
+{\footnotesize\ttfamily bool go\+\_\+left (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja przemieszczająca węża w lewo \begin{DoxyReturn}{Returns}
+flaga informująca o tym czy nastąpiła kolizja 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_a532295802b6edeb451ed0c89c1a29639}\label{snake_8c_a532295802b6edeb451ed0c89c1a29639}} 
+\index{snake.c@{snake.c}!go\_right@{go\_right}}
+\index{go\_right@{go\_right}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{go\_right()}{go\_right()}}
+{\footnotesize\ttfamily bool go\+\_\+right (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja przemieszczająca węża w prawo \begin{DoxyReturn}{Returns}
+flaga informująca o tym czy nastąpiła kolizja 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_a854375ed7069a3ff96830dd7b7487683}\label{snake_8c_a854375ed7069a3ff96830dd7b7487683}} 
+\index{snake.c@{snake.c}!go\_up@{go\_up}}
+\index{go\_up@{go\_up}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{go\_up()}{go\_up()}}
+{\footnotesize\ttfamily bool go\+\_\+up (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja przemieszczająca węża w górę \begin{DoxyReturn}{Returns}
+flaga informująca o tym czy nastąpiła kolizja 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_a0d345717cd5e7e3fb37bce26b3b035be}\label{snake_8c_a0d345717cd5e7e3fb37bce26b3b035be}} 
+\index{snake.c@{snake.c}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily bool is\+\_\+empty (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}}}]{queue }\end{DoxyParamCaption})}
+
+funkcja określająca czy kolejka węża jest pusta \begin{DoxyReturn}{Returns}
+flaga określająca czy kolejka jest pusta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_aeb70803051ab20155e746e0cfd6d9e04}\label{snake_8c_aeb70803051ab20155e746e0cfd6d9e04}} 
+\index{snake.c@{snake.c}!move\_snake@{move\_snake}}
+\index{move\_snake@{move\_snake}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{move\_snake()}{move\_snake()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{main__header_8h_a015eb90e0de9f16e87bd149d4b9ce959}{status}} move\+\_\+snake (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structSnake}{Snake}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja określająca czy dany ruch się powiódł \begin{DoxyReturn}{Returns}
+wartość wyliczenia informująca czy dany ruch zakończył się sukcesem 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_a6a05bdc4a5c002c137244fd451478bf0}\label{snake_8c_a6a05bdc4a5c002c137244fd451478bf0}} 
+\index{snake.c@{snake.c}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily bool pop\+\_\+back (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+funkcja zdejmująca element z końca kolejki \begin{DoxyReturn}{Returns}
+flaga określająca czy zdejmowanie się powiodło 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_ad1c9afbd1d33a40651b78d3f56bbc99b}\label{snake_8c_ad1c9afbd1d33a40651b78d3f56bbc99b}} 
+\index{snake.c@{snake.c}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily bool push\+\_\+back (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} $\ast$}]{,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+funkcja dodająca element o podanych koordynatach na koniec kolejki \begin{DoxyReturn}{Returns}
+flaga określająca czy dodawanie się powiodło 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_a7e72a8b6c470e90e8d69fb82a33f87ca}\label{snake_8c_a7e72a8b6c470e90e8d69fb82a33f87ca}} 
+\index{snake.c@{snake.c}!push\_front@{push\_front}}
+\index{push\_front@{push\_front}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{push\_front()}{push\_front()}}
+{\footnotesize\ttfamily bool push\+\_\+front (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}} $\ast$}]{,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+funkcja dodająca element o podanych współrzędnych na początek kolejki \begin{DoxyReturn}{Returns}
+flaga określająca czy dodawanie się powiodło 
+\end{DoxyReturn}
+\mbox{\Hypertarget{snake_8c_ae2e821e0abda04e2d2c85ef528cd4352}\label{snake_8c_ae2e821e0abda04e2d2c85ef528cd4352}} 
+\index{snake.c@{snake.c}!save\_to\_file@{save\_to\_file}}
+\index{save\_to\_file@{save\_to\_file}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{save\_to\_file()}{save\_to\_file()}}
+{\footnotesize\ttfamily void save\+\_\+to\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{snake_8c_a3250568507dbe2bc6d8dfcf12a374b2e}\label{snake_8c_a3250568507dbe2bc6d8dfcf12a374b2e}} 
+\index{snake.c@{snake.c}!search\_queue@{search\_queue}}
+\index{search\_queue@{search\_queue}!snake.c@{snake.c}}
+\subsubsection{\texorpdfstring{search\_queue()}{search\_queue()}}
+{\footnotesize\ttfamily bool search\+\_\+queue (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structsnake__queue}{snake\+\_\+queue}}}]{,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+funkcja określająca czy w kolejce występuje element o podanych koordynatach \begin{DoxyReturn}{Returns}
+flaga określająca czy podany element wystąpił 
+\end{DoxyReturn}
